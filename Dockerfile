@@ -31,3 +31,5 @@ RUN echo 'rvm --default use 2.2.10-dev' >> ~/.bashrc
 RUN apt-get install -y libmysqld-dev libmysqlclient-dev mysql-client
 RUN mkdir /tmp/pids && mkdir /tmp/sockets
 RUN /bin/bash -l -c "systemctl enable nginx"
+
+CMD ["/sbin/my_init"]
